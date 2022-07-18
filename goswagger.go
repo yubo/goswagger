@@ -6,10 +6,10 @@ import (
 	"net/http"
 )
 
-//go:embed tpl/index.html.tpl swagger/*.png swagger/*.css swagger/*.js
+//go:embed tpl/index.html swagger/*.png swagger/*.css swagger/*.js
 var fs embed.FS
 
-var indexTpl = parseTpl("tpl/index.html.tpl")
+var indexTpl = parseTpl("tpl/index.html")
 
 type Config struct {
 	Name         string `json:"name" flag:"swagger-name" description:"swagger name"`
